@@ -1,0 +1,12 @@
+[package]
+name = "cli-nparray"
+version = "0.1.0"
+authors = ["nicola montecchio <nicola.montecchio@gmail.com>"]
+
+[dependencies]
+byteorder = "0.5.3"
+clap = "2.19.3"
+
+[[bin]]
+name = "npy-write"
+path = "src/npywrite.rs"
