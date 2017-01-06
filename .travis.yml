@@ -1,0 +1,12 @@
+language: rust
+rust:
+- stable
+script: cargo build --release
+deploy:
+  provider: releases
+  api_key:
+    secure: MLoGkXMCDBft5au3XfR8QWroiVRF/Bj3AI+d0jFai1zrVN8VxbLC/8oEpJGqP2l1qV908D38Uh4dSuFCCU1bkg8vz5Bg7lhAZj5d3jBWcg/0SeI0GB4LGbySPWf1x6h2+M+M6aN4Xaw8ELCW4jLJuEM/sCTF3U3HEbk2ILpY1ejifhMy0pg+P0jZKgemsnQbKHpoDSucqJ6p1FHQWz5pIFtlH4MfUnQswTCsDUaHticdYSsnKJmsy8C1riyKC0mlSBgqbRvuxMOMbLem1KdRRCLdQHoB+IEAKgCU/8z0Zc5EqwzVolpiHQIRATHUeIwjteHtM3gg5XzD8Zj6eN/iwe6j3EFem0Z8YbWE45DA4wQPKHhWfhkExaN9hMC6Xb/RnoPhQzsSO4OXEbLeTi7nSPUwe58i87vG+zv9Gputp2LVKReDKkr+D1sXdJTdj/hRX1w/k9TuHZCxUdrm4gVtbg8KZaRYqZMZhEeBJ5ouRrldXh2xCa0IiCAnLcQM5AiKX1zjpiS105frRT4OGORae8HquXcdVpt9T7ncQ9Dpkgou2NHsPr70slTsmCUoAi/myTtCu6pfmsDlDmJHuOmpYW35UwuSICuL9D/tPrhgbv2VOfR4lmkHwhUGoSM5iNgUIG2YU9eZ5KwM8szJ9wOEPhazGz9kJOnWn8qSlOyjGUk=
+  file: target/release/npy-write
+  on:
+    repo: nicolamontecchio/npy-write
+  skip_cleanup: true
