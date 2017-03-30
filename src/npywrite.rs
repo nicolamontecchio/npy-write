@@ -170,7 +170,7 @@ fn main() {
     "i64" => DType::I64,
     "f32" => DType::F32,
     "f64" => DType::F64,
-    _ => DType::U32
+    _ => DType::F32
   };
   match File::create(out_fpath).and_then(
     |mut fout| txt_to_npy(stdin, &mut fout, &dtype, &sep)) {
